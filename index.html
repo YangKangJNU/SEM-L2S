@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SEM-L2S</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">SEM-L2S</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    var CNCVS_ID1 = [
+        "demo1.mp4",
+        "demo2.mp4",
+        "demo3.mp4",
+        "demo4.mp4"
+    ];
+    var CNCVS_TEXT1 = [
+        "包括能够走遍二百多个城市那其实对于我来讲我觉得最应该感谢的就是我的成长经历",
+        "所以他总结的就特别的到位所以也希望就是大家能够有一个全新的一个体验",
+        "是不是需要有一些反思我们是如何来来看待偏见在我们个体当中对于我们人类社会我们是如何来标准化这个偏见这个问题也就是说偏见",
+        "他们运用的那目前越来越多以数码的方式以往呢在二十年前更多的是用转译的方式来完成这样一件事情"
+    ];
+
+    var CMLR_ID1 = [
+        "demo1.mp4",
+        "demo2.mp4",
+        "demo3.mp4",
+        "demo4.mp4"
+    ];
+    var CMLR_TEXT1 = [
+        "他为本地区的和平与发展做出了重要贡献",
+        "在国际和地区事务中保持良好沟通和协调",
+        "今天我国北方部分地区出现较强降雨天气",
+        "在他眼里让生命变得有意义"
+    ];
+    var CNVSRC_ID1 = [
+        "demo1.mp4",
+        "demo2.mp4",
+        "demo3.mp4",
+        "demo4.mp4"
+    ];
+    var CNVSRC_TEXT1 = [
+        "学习是为了帮女朋友学习",
+        "这个微博是官方的吗",
+        "希望可以给我一片白茫茫的世界",
+        "看的风景越多就觉得还有太多的风景没有看过"
+    ]
+
+</script>
+
+
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container">
+            <h2 class="title is-4" style="margin-left: -200px">Generated Samples on CN-CVS speech</h2>
+            <table border="0" style="width: 150%; margin-left: -200px;">
+                <thead>
+                <tr>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        Ground Truth
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        SVTS
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        Multi-task
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        Intelligible L2S
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        ReVISE
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        LTBS
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        SEM-L2S
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        SEM-L2S(AISHELL-3)
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 20%; text-align: center; padding: 20px; color:black">
+                        Text
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <script>
+                    for (var i = 0; i < CNCVS_ID1.length; i++) {
+                        document.write("<tr>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size\" poster=\"\" controls><source src=\"static/videos/cncvs_video_h264/gt/" + CNCVS_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size\" poster=\"\" controls><source src=\"static/videos/cncvs_video_h264/svts/" + CNCVS_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size\" poster=\"\" controls><source src=\"static/videos/cncvs_video_h264/mt/" + CNCVS_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size\" poster=\"\" controls><source src=\"static/videos/cncvs_video_h264/unit/" + CNCVS_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size\" poster=\"\" controls><source src=\"static/videos/cncvs_video_h264/revise/" + CNCVS_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size\" poster=\"\" controls><source src=\"static/videos/cncvs_video_h264/ltbs/" + CNCVS_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size\" poster=\"\" controls><source src=\"static/videos/cncvs_video_h264/sem_cncvs/" + CNCVS_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size\" poster=\"\" controls><source src=\"static/videos/cncvs_video_h264/sem_aishell3/" + CNCVS_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\" class=\"limited-width\">" + CNCVS_TEXT1[i] + "</td>");
+                        document.write("</tr>");
+                    }
+                </script>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container">
+            <h2 class="title is-4" style="margin-left: -200px">Generated Samples on CMLR</h2>
+            <table border="0" style="width: 150%; margin-left: -200px;">
+                <thead>
+                <tr>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        Ground Truth
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        SVTS
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        Multi-task
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        Intelligible L2S
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        ReVISE
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        LTBS
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        SEM-L2S
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        SEM-L2S(AISHELL-3)
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 20%; text-align: center; padding: 20px; color:black">
+                        Text
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <script>
+                    for (var i = 0; i < CMLR_ID1.length; i++) {
+                        document.write("<tr>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size-cmlr\" poster=\"\" controls><source src=\"static/videos/cmlr_video_h264/gt/" + CMLR_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size-cmlr\" poster=\"\" controls><source src=\"static/videos/cmlr_video_h264/svts/" + CMLR_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size-cmlr\" poster=\"\" controls><source src=\"static/videos/cmlr_video_h264/mt/" + CMLR_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size-cmlr\" poster=\"\" controls><source src=\"static/videos/cmlr_video_h264/unit/" + CMLR_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size-cmlr\" poster=\"\" controls><source src=\"static/videos/cmlr_video_h264/revise/" + CMLR_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size-cmlr\" poster=\"\" controls><source src=\"static/videos/cmlr_video_h264/ltbs/" + CMLR_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size-cmlr\" poster=\"\" controls><source src=\"static/videos/cmlr_video_h264/sem_cmlr/" + CMLR_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size-cmlr\" poster=\"\" controls><source src=\"static/videos/cmlr_video_h264/sem_aishell3/" + CMLR_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\" class=\"limited-width\">" + CMLR_TEXT1[i] + "</td>");
+                        document.write("</tr>");
+                    }
+                </script>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container">
+            <h2 class="title is-4" style="margin-left: -200px">Generated Samples on CNVSRC-multi Dev</h2>
+            <table border="0" style="width: 150%; margin-left: -200px;">
+                <thead>
+                <tr>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        Ground Truth
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        SVTS
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        Multi-task
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        Intelligible L2S
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        ReVISE
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        LTBS
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        SEM-L2S
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 12.5%; text-align: center; padding: 20px; color:black">
+                        SEM-L2S(AISHELL-3)
+                    </th>
+                    <th style="background-color:white; position: sticky; top: 0;width: 20%; text-align: center; padding: 20px; color:black">
+                        Text
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <script>
+                    for (var i = 0; i < CNVSRC_ID1.length; i++) {
+                        document.write("<tr>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size-cmlr\" poster=\"\" controls><source src=\"static/videos/cnvsrc_video_h264/gt/" + CNVSRC_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size-cmlr\" poster=\"\" controls><source src=\"static/videos/cnvsrc_video_h264/svts/" + CNVSRC_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size-cmlr\" poster=\"\" controls><source src=\"static/videos/cnvsrc_video_h264/mt/" + CNVSRC_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size-cmlr\" poster=\"\" controls><source src=\"static/videos/cnvsrc_video_h264/unit/" + CNVSRC_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size-cmlr\" poster=\"\" controls><source src=\"static/videos/cnvsrc_video_h264/revise/" + CNVSRC_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size-cmlr\" poster=\"\" controls><source src=\"static/videos/cnvsrc_video_h264/ltbs/" + CNVSRC_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size-cmlr\" poster=\"\" controls><source src=\"static/videos/cnvsrc_video_h264/sem_cncvs/" + CNVSRC_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\"><video class=\"fixed-size-cmlr\" poster=\"\" controls><source src=\"static/videos/cnvsrc_video_h264/sem_aishell3/" + CNVSRC_ID1[i] + "\" type=\"video/mp4\"></video></td>");
+                        document.write("<td align=\"center\" class=\"limited-width\">" + CNVSRC_TEXT1[i] + "</td>");
+                        document.write("</tr>");
+                    }
+                </script>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<style>
+    .fixed-size {
+        width: 200px;
+        height: 200px; /* Adjust height as needed */
+        object-fit: cover; /* Ensure the video fills the area */
+    }
+</style>
+
+<style>
+    .fixed-size-cmlr {
+        width: 200px;
+        height: 200px; /* Adjust height as needed */
+        object-fit: cover; /* Ensure the video fills the area */
+    }
+</style>
+
+<style>
+.limited-width {
+    width: 300px;
+    max-height: 6em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; 
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+
+
+</style>
+
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+
+                    <p>
+                        This page was built using the <a
+                            href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic
+                        Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io"
+                                                                                target="_blank">Nerfies</a> project
+                        page.
+                        <br> This website is licensed under a <a rel="license"
+                                                                         href="http://creativecommons.org/licenses/by-sa/4.0/"
+                                                                         target="_blank">Creative
+                        Commons Attribution-ShareAlike 4.0 International License</a>.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+<!-- End of Statcounter Code -->
+
+</body>
+</html>
